@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 type FormState = {
   name: string;
@@ -35,12 +36,12 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section className="max-w-4xl mx-auto p-6 my-12 bg-white shadow-lg rounded-lg">
+    <section className="max-w-4xl mx-auto p-6 my-12 bg-green shadow-lg rounded-lg bg">
       <h2 className="text-3xl font-bold mb-6 text-blue-700">Contato</h2>
       <div className="md:flex md:gap-10">
         <div className="md:w-1/2 space-y-4 mb-6 md:mb-0">
           <h3 className="text-xl font-semibold">Fale Conosco</h3>
-          <p className="text-gray-600">Estamos prontos para tirar suas dúvidas sobre nossas camisas oficiais e personalizadas!</p>
+          <p className="">Estamos prontos para tirar suas dúvidas sobre nossas camisas oficiais e personalizadas!</p>
           <div>
             <span className="block font-medium">Email:</span>
             <span>contato@camisastime.com</span>
@@ -55,6 +56,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
         <form onSubmit={handleSubmit} className="md:w-1/2 flex flex-col gap-4">
+        <h2>Nome</h2>
           <input
             type="text"
             name="name"
@@ -63,6 +65,7 @@ const Contact: React.FC = () => {
             value={form.name}
             onChange={handleChange}
           />
+          <h2>Email</h2>
           <input
             type="email"
             name="email"
@@ -71,6 +74,7 @@ const Contact: React.FC = () => {
             value={form.email}
             onChange={handleChange}
           />
+          <h2>Mensagem</h2>
           <textarea
             name="message"
             placeholder="Sua mensagem"
@@ -91,8 +95,8 @@ const Contact: React.FC = () => {
         </form>
       </div>
       <div className="mt-8 flex gap-6">
-        <a href="#" className="text-blue-700 hover:underline">Instagram</a>
-        <a href="#" className="text-blue-700 hover:underline">WhatsApp</a>
+        <Link to="#" className="text-blue-700 hover:underline">Instagram</Link>
+        <Link to="#" className="text-blue-700 hover:underline">WhatsApp</Link>
       </div>
     </section>
   );
