@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 type FormState = {
@@ -95,7 +94,7 @@ const Contact: React.FC = () => {
           </button>
         </form>
       </div>
-<div className="mt-8 flex gap-6">
+          <div className="mt-8 flex gap-6">
   <a
     href="#"
     target="_blank"
