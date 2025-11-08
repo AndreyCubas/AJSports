@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 type FormState = {
   name: string;
@@ -41,7 +42,7 @@ const Contact: React.FC = () => {
       <div className="md:flex md:gap-10">
         <div className="md:w-1/2 space-y-4 mb-6 md:mb-0">
           <h3 className="text-xl font-semibold">Fale Conosco</h3>
-          <p className="">Estamos prontos para tirar suas dúvidas sobre nossas camisas oficiais e personalizadas!</p>
+          <p className="">Estamos prontos para tirar suas dúvidas sobre nossas camisas tailandesas e personalizadas!</p>
           <div>
             <span className="block font-medium">Email:</span>
             <span>contato@camisastime.com</span>
@@ -94,10 +95,27 @@ const Contact: React.FC = () => {
           </button>
         </form>
       </div>
-      <div className="mt-8 flex gap-6">
-        <Link to="#" className="text-blue-700 hover:underline">Instagram</Link>
-        <Link to="#" className="text-blue-700 hover:underline">WhatsApp</Link>
-      </div>
+<div className="mt-8 flex gap-6">
+  <a
+    href="#"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 text-blue-700 hover:text-pink-600 transition-colors"
+  >
+    <FaInstagram className="text-2xl" />
+    <span>Instagram</span>
+  </a>
+
+  <a
+    href="#"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 text-blue-700 hover:text-green-600 transition-colors"
+  >
+    <FaWhatsapp className="text-2xl" />
+    <span>WhatsApp</span>
+  </a>
+</div>
     </section>
   );
 };
