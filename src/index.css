@@ -2,7 +2,6 @@
 @import "tailwindcss/theme";
 @import "tailwindcss/utilities";
 
-/* Estilos globais adicionais */
 html, body, #root {
   height: 100%;
 }
