@@ -1,10 +1,12 @@
 import React, { useId } from "react";
 import Input from "./Input";
 
+
 type InputFloatProps =  {
   label: string;
   containerClassName?: string;
 }& Omit<React.ComponentProps<"input">, "className">;
+
 
 export const InputFloat = React.forwardRef<
   HTMLInputElement,
