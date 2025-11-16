@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaLock } from "react-icons/fa";
+import Input from "../../components/Input";
 
 type FormState = {
   email: string;
@@ -50,26 +51,39 @@ const SignIn: React.FC = () => {
           </p>
         </div>
         <form onSubmit={handleSubmit} className="md:w-1/2 flex flex-col gap-4">
-          <div>
-            <label
-              htmlFor="email"
-              className="block mb-1 font-medium text-gray-700"
-            >
-              Email
-            </label>
-            <input
+          <div
+          className="relative w-[250px]"
+          > 
+            <Input
               type="email"
               name="email"
               id="email"
-              placeholder="seu@email.com"
-              className="border p-3 rounded focus:outline-blue-500 w-full"
               value={form.email}
               onChange={handleChange}
               disabled={loading}
-            />
+            />         
+            <label
+              htmlFor="email"
+              className="absolute left-0 top-0 flex h-full w-full items-center 
+              pl-2.5 transition-all duration-300 ease-in-out
+              peer-placeholder-shown:text-base
+              peer-placeholder-shown:pl-2.5
+              peer-focus:h-1/2
+              peer-focus:-translate-y-full
+              peer-focus:pl-0
+              peer-focus:text-xs
+              peer-focus:text-[#777]
+              peer-[&:not(:placeholder-shown)]:h-1/2
+              peer-[&:not(:placeholder-shown)]:-translate-y-full
+              peer-[&:not(:placeholder-shown)]:pl-0
+              peer-[&:not(:placeholder-shown)]:text-xs
+              peer-[&:not(:placeholder-shown)]:text-[#777]"
+            >
+              Email
+            </label>
           </div>
 
-          <div>
+          <div className="input-floating">
             <label
               htmlFor="password"
               className="block mb-1 font-medium text-gray-700"
