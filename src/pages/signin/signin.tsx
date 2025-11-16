@@ -46,7 +46,7 @@ const SignIn: React.FC = () => {
       <h2 className="text-3xl font-bold mb-6 text-blue-700">Login</h2>
       <div className="md:flex md:gap-10">
         <div className="md:w-1/2 space-y-4 mb-6 md:mb-0 flex flex-col justify-center items-center text-center md:items-start md:text-left">
-          <FaLock className="text-5xl text-blue-700 mb-4" />
+          <FaLock className="text-5xl text-blue-700 mb-8" />
           <h3 className="text-xl font-semibold">Acesse sua Conta</h3>
           <p className="">
             Bem-vindo de volta! Faça login para acessar seus pedidos e
@@ -54,28 +54,6 @@ const SignIn: React.FC = () => {
           </p>
         </div>
         <form onSubmit={handleSubmit} className="md:w-1/2 flex flex-col gap-4">
-          <div>
-            <InputFloat
-              label="Primeiro nome"
-              type="firstName"
-              name="firstName"
-              id="firstName"
-              value={form.firstName}
-              onChange={handleChange}
-              disabled={loading}
-            />
-          </div>
-          <div>
-            <InputFloat
-              label="Último nome"
-              type="lastName"
-              name="lastName"
-              id="lastName"
-              value={form.lastName}
-              onChange={handleChange}
-              disabled={loading}
-            />
-          </div>
           <div>
             <InputFloat
               label="E-mail"
