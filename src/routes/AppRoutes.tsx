@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import Contact from "../pages/contact/Contact";
+import Contact from "../pages/contact/contato";
 import Login from "../pages/Login/Login";
-import Register from "react-router-dom";
+import Register from "../pages/register/Register";
 
 export default function AppRoutes() {
   return (

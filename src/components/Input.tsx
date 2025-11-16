@@ -7,11 +7,11 @@ type InputProps = {
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, ...rest }, ref) => {
     const base =
-      "peer h-10 w-106 bg-transparent px-[15px] py-0 " +
+      "peer w-full h-11 bg-transparent px-4 py-0 " +
       "placeholder-transparent " +
-      "border border-gray-500 rounded-md " + 
-      "focus:border-blue-600 " + 
-      "focus:outline-none focus:ring-0"; 
+      "border border-gray-400 rounded-md " +
+      "transition-all duration-200 " +
+      "focus:border-blue-600 focus:outline-none focus:ring-0";
 
     const classes = `${base} ${className || ""}`;
 
@@ -19,5 +19,5 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
   }
 );
 
-Input.displayName = "I  nput";
+Input.displayName = "Input";
 export default Input;
