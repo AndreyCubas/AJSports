@@ -18,21 +18,20 @@ export const InputFloat = React.forwardRef<
 
   return (
     <div className={`relative w-full ${containerClassName || ""}`}>
-
+      
       <Input
         {...inputProps}
-        id={effectiveId}
         ref={ref}
-        placeholder=" "
+        id={effectiveId}
+        placeholder=" "   // <-- placeholder vazio resolve tudo
       />
 
       <label
         htmlFor={effectiveId}
         className="
           absolute left-3 top-1/2 -translate-y-1/2 
-          px-1 bg-white text-gray-500 
-          pointer-events-none 
-          transition-all duration-200 ease-out 
+          bg-white px-1 text-gray-500 pointer-events-none
+          transition-all duration-200 
 
           peer-placeholder-shown:text-base
           peer-placeholder-shown:top-1/2
@@ -50,9 +49,6 @@ export const InputFloat = React.forwardRef<
       >
         {label}
       </label>
-
     </div>
   );
 });
-
-InputFloat.displayName = "InputFloat";
