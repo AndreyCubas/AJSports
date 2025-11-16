@@ -48,7 +48,7 @@ const Login: React.FC = () => {
     rounded-2xl 
     shadow-[0_4px_30px_rgba(0,0,0,0.08)]
     p-10 
-    border border-gray-100
+    border border-gray- 100
     backdrop-blur-sm
     ">
       <h2 className="text-3xl font-bold mb-6 text-blue-700">Login</h2>

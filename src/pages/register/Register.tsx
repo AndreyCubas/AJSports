@@ -27,8 +27,8 @@ const Register: React.FC = () => {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    if (!form.email || !form.password) {
-      setError("Por favor, preencha e-mail e senha.");
+    if (!form.firstName || !form.lastName|| !form.email || !form.password) {
+      setError("Por favor, preencha os campos.");
       return;
     }
     setError("");
@@ -56,6 +56,28 @@ const Register: React.FC = () => {
         <form onSubmit={handleSubmit} className="md:w-1/2 flex flex-col gap-4">
           <div>
             <InputFloat
+              label="Primeiro nome"
+              type="primeiro-nome"
+              name="primeiro-nome"
+              id="primeiro-nome"
+              value={form.firstName}
+              onChange={handleChange}
+              disabled={loading}
+            />
+          </div>
+          <div>
+            <InputFloat
+              label="Ultimo nome"
+              type="ultimo-nome"
+              name="ultimo-nome"
+              id="ultimo-nome"
+              value={form.lastName}
+              onChange={handleChange}
+              disabled={loading}
+            />
+          </div>
+          <div>
+            <InputFloat
               label="E-mail"
               type="email"
               name="email"
@@ -65,7 +87,6 @@ const Register: React.FC = () => {
               disabled={loading}
             />
           </div>
-
           <div>
             <InputFloat
               label="Sua senha"
@@ -84,28 +105,22 @@ const Register: React.FC = () => {
             <span className="text-blue-700">Autenticando...</span>
           )}
 
-          <button
-            type="submit"
-            className="bg-blue-700 text-white font-semibold py-2 px-4 rounded hover:bg-blue-800 duration-200 disabled:bg-blue-400"
-            disabled={loading}
-          >
+          <div className="flex flex-col items-center gap-4">
+            <button
+              type="submit"
+              className="bg-blue-700 text-white font-semibold py-2 px-48 rounded hover:bg-blue-800 duration-200 disabled:bg-blue-400"
+              disabled={loading}
+            >
             {loading ? "Entrando..." : "Entrar"}
-          </button>
+            </button>
 
-          <div className="flex justify-between mt-4 text-sm">
             <a
               href="#"
-              className="text-blue-700 hover:text-blue-900 hover:underline transition-colors"
+              className="text-blue-700 hover:text-blue-900 hover:underline transition-colors text-sm"
             >
-              Esqueceu sua senha?
+            Já tem uma conta? Login
             </a>
-            <a
-              href="#"
-              className="text-blue-700 hover:text-blue-900 hover:underline transition-colors"
-            >
-              Não tem uma conta? Cadastre-se
-            </a>
-          </div>
+            </div>
         </form>
       </div>
     </section>

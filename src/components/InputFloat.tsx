@@ -23,7 +23,7 @@ export const InputFloat = React.forwardRef<
         {...inputProps}
         ref={ref}
         id={effectiveId}
-        placeholder=" "   // <-- placeholder vazio resolve tudo
+        placeholder=" "
       />
 
       <label
