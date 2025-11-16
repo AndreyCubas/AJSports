@@ -1,52 +1,62 @@
-import React, { useId } from 'react';
-import Input from './Input';
+import React, { useId } from "react";
+import Input from "./Input";
 
-type InputFloatProps = React.ComponentProps<typeof Input> & {
+type InputFlutuanteProps =  {
   label: string;
-};
+  containerClassName?: string;
+}& Omit<React.ComponentProps<"input">, "className">;
 
-export const InputFloat = React.forwardRef<HTMLInputElement, InputFloatProps>(
-  ({ label, id, ...inputProps }, ref) => {
-    
+export const InputFloat = React.forwardRef<
+  HTMLInputElement,
+  InputFlutuanteProps
+>(({ label, id, containerClassName, ...inputProps }, ref) => {
+  
+  const internalId = useId();
+  const effectiveId = id || internalId;
 
-    const internalId = useId();
-    const effectiveId = id || internalId;
+  return (
+    <div className={`relative w-full ${containerClassName || ""}`}>
+      
+      <Input
+        {...inputProps}
+        ref={ref}
+        id={effectiveId}
+        placeholder={label}
+      />
 
-    return (
-      <div className={`relative w-[250px]}`}>
-        <Input
-          {...inputProps}
-          ref={ref}
-          id={effectiveId}
-          placeholder={label} 
-        />
-        
-        <label
-          htmlFor={effectiveId}
-          className="absolute left-0 top-0 flex h-full w-full items-center 
-                     pl-2.5 transition-all duration-300 ease-in-out
-                     text-gray-500 
-                     
-                     peer-placeholder-shown:text-base
-                     peer-placeholder-shown:pl-2.5
-                     
-                     peer-focus:h-1/2
-                     peer-focus:-translate-y-full
-                     peer-focus:pl-0
-                     peer-focus:text-xs
-                     peer-focus:text-[#777]
+      <label
+        htmlFor={effectiveId}
+        className="absolute left-0 top-0 flex h-10 w-full items-center 
+                   pl-4 
+                   transition-all duration-300 ease-in-out
+                   text-gray-500 
+                   pointer-events-none 
 
-                     peer-[&:not(:placeholder-shown)]:h-1/2
-                     peer-[&:not(:placeholder-shown)]:-translate-y-full
-                     peer-[&:not(:placeholder-shown)]:pl-0
-                     peer-[&:not(:placeholder-shown)]:text-xs
-                     peer-[&:not(:placeholder-shown)]:text-[#777]"
-        >
-          {label}
-        </label>
-      </div>
-    );
-  }
-);
+                   peer-placeholder-shown:text-base
+                   peer-placeholder-shown:pl-4
+                   
+                   peer-focus:top-0
+                   peer-focus:-translate-y-1/2 
+                   peer-focus:left-3 
+                   peer-focus:text-xs
+                   peer-focus:text-[#777]
+                   peer-focus:bg-white
+                   peer-focus:px-1
+                   peer-focus:h-auto
 
-InputFloat.displayName = 'I nputFloat';
+                   peer-[&:not(:placeholder-shown)]:top-0
+                   peer-[&:not(:placeholder-shown)]:-translate-y-1/2
+                   peer-[&:not(:placeholder-shown)]:left-3
+                   peer-[&:not(:placeholder-shown)]:text-xs
+                   peer-[&:not(:placeholder-shown)]:text-[#777]
+                   peer-[&:not(:placeholder-shown)]:bg-white /* <-- IMPORTANTE */
+                   peer-[&:not(:placeholder-shown)]:px-1
+                   peer-[&:not(:placeholder-shown)]:h-auto"
+      >
+        {label}
+      </label>
+    </div>
+  );
+});
+
+InputFloat.displayName = "InputFloat";
