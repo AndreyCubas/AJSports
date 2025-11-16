@@ -42,7 +42,15 @@ const Login: React.FC = () => {
   };
 
   return (
-    <section className="max-w-4xl mx-auto p-6 my-12 bg-white shadow-lg rounded-lg">
+    <section className="
+     max-w-4xl mx-auto my-16
+    bg-white 
+    rounded-2xl 
+    shadow-[0_4px_30px_rgba(0,0,0,0.08)]
+    p-10 
+    border border-gray-100
+    backdrop-blur-sm
+    ">
       <h2 className="text-3xl font-bold mb-6 text-blue-700">Login</h2>
       <div className="md:flex md:gap-10">
         <div className="md:w-1/2 space-y-4 mb-6 md:mb-0 flex flex-col justify-center items-center text-center md:items-start md:text-left">
