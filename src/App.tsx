@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import AppRoutes from "./routes/AppRoutes";
-import Sidebar from "./components/sidebar";
+import Sidebar from "./components/sidebar/Sidebar";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);

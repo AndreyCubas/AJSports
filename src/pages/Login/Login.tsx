@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaLock } from "react-icons/fa";
-import { InputFloat } from "../../components/InputFloat";
+import { InputFloat } from "../../components/InputFloat/InputFloat";
 
 type FormState = {
   firstName: string;

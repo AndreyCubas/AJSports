@@ -1,5 +1,5 @@
 import React, { useId } from "react";
-import Input from "./Input";
+import Input from "../input/Input";
 
 
 type InputFloatProps =  {
