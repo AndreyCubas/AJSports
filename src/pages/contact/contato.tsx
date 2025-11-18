@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section className="max-w-4xl mx-auto p-6 my-12 bg-green shadow-lg rounded-lg bg">
+    <section className="max-w-4xl mx-auto p-6 bg-green shadow-lg rounded-lg bg white border">
       <h2 className="text-3xl font-bold mb-6 text-blue-700">Contato</h2>
       <div className="md:flex md:gap-10">
         <div className="md:w-1/2 space-y-4 mb-6 md:mb-0">
