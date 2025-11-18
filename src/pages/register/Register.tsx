@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaLock } from "react-icons/fa";
 import { InputFloat } from "../../components/InputFloat/InputFloat";
+import { Link } from "react-router-dom";
 
 type FormState = {
   firstName: string;
@@ -42,15 +43,14 @@ const Register: React.FC = () => {
   };
 
   return (
-    <section className="max-w-4xl mx-auto p-6 my-12 bg-white shadow-lg rounded-lg">
-      <h2 className="text-3xl font-bold mb-6 text-blue-700">Register</h2>
+    <section className="max-w-4xl mx-auto p-6 my-12 bg-white shadow-lg rounded-lg border">
+      <h2 className="text-3xl font-bold mb-6 text-blue-700">Criar conta</h2>
       <div className="md:flex md:gap-10">
         <div className="md:w-1/2 space-y-4 mb-6 md:mb-0 flex flex-col justify-center items-center text-center md:items-start md:text-left">
           <FaLock className="text-5xl text-blue-700 mb-8" />
-          <h3 className="text-xl font-semibold">Acesse sua Conta</h3>
+          <h3 className="text-xl font-semibold">Crie sua conta</h3>
           <p className="">
-            Bem-vindo de volta! Faça Register para acessar seus pedidos e
-            configurações.
+            Bem-vindo! Cadastre sua conta para começar a busca por suas camisas preferidas.
           </p>
         </div>
         <form onSubmit={handleSubmit} className="md:w-1/2 flex flex-col gap-4">
@@ -114,12 +114,12 @@ const Register: React.FC = () => {
             {loading ? "Entrando..." : "Entrar"}
             </button>
 
-            <a
-              href="#"
-              className="text-blue-700 hover:text-blue-900 hover:underline transition-colors text-sm"
-            >
-            Já tem uma conta? Login
-            </a>
+              <Link
+  to="/login"
+  className="text-blue-700 hover:text-blue-900 hover:underline transition-colors text-lg"
+>
+  Já tem uma conta? Login
+</Link>
             </div>
         </form>
       </div>
