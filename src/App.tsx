@@ -15,18 +15,12 @@ function App() {
         >
           ☰
         </button>
-
-        {/* Seu parágrafo de exemplo */}
         <div className="p-6">
-          <p className="text-lg mb-6">
-            Bem-vindo ao site oficial da Camisaria FC! Aqui você encontra as melhores camisas de time, promoções e novidades do futebol.
-          </p>
           <AppRoutes />
         </div>
       </div>
     </div>
   );
-
 }
 
 export default App;

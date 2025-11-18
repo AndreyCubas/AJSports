@@ -8,7 +8,7 @@ export default function AppRoutes() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Navigate to="/contact" replace />} />
+        <Route path="/" element={<Navigate to="/" replace />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register/>}/>
