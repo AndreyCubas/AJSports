@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaLock } from "react-icons/fa";
 import { InputFloat } from "../../components/InputFloat/InputFloat";
+import { Link } from "react-router-dom";
 
 type FormState = {
   firstName: string;
@@ -101,18 +102,19 @@ const Login: React.FC = () => {
           </button>
 
           <div className="flex justify-between mt-4 text-sm">
-            <a
-              href="#"
-              className="text-blue-700 hover:text-blue-900 hover:underline transition-colors"
-            >
-              Esqueceu sua senha?
-            </a>
-            <a
-              href="#"
-              className="text-blue-700 hover:text-blue-900 hover:underline transition-colors"
-            >
-              Não tem uma conta? Cadastre-se
-            </a>
+              <Link
+    to="/forgot-password"
+    className="text-blue-700 hover:text-blue-900 hover:underline transition-colors text-lg"
+  >
+    Esqueceu sua senha?
+  </Link>
+
+  <Link
+    to="/register"
+    className="text-blue-700 hover:text-blue-900 hover:underline transition-colors text-lg"
+  >
+    Não tem uma conta? Cadastre-se
+  </Link>
           </div>
         </form>
       </div>
