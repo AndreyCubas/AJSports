@@ -17,7 +17,7 @@ const mockCart: CartItem[] = [
     team: "Flamengo",
     price: 269.99,
     quantity: 1,
-    image: "https://via.placeholder.com/80x95.png?text=Flamengo"
+    image: "../../camisas/Camisas jogador/Flamengo l 25-26/202502201322031.jpg"
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const mockCart: CartItem[] = [
     team: "São Paulo",
     price: 159.99,
     quantity: 2,
-    image: "https://via.placeholder.com/80x95.png?text=São+Paulo"
+    image: "../../assets/sao-paulo-2025.png"
   },
 ];
 
@@ -67,7 +67,7 @@ const Cart: React.FC = () => {
                 <img
                   src={item.image}
                   alt={item.team}
-                  className="w-20 h-24 object-cover rounded bg-gray-200"
+                  className="w-40 h-40 object-cover rounded bg-gray-200"
                 />
                 <div className="flex-1">
                   <h4 className="font-semibold text-xl">{item.name}</h4>
