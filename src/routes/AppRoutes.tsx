@@ -3,6 +3,7 @@ import Contact from "../pages/contact/contato";
 import Login from "../pages/Login/Login";
 import Register from "../pages/register/Register";
 import ForgotPassword from "../pages/forgotPassword/forgotPassword";
+import Cart from "../pages/carrinho/carrinho";
 
 export default function AppRoutes() {
   return (
@@ -13,6 +14,7 @@ export default function AppRoutes() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register/>}/>
         <Route path="/forgot-password" element={<ForgotPassword/>}/>
+        <Route path="/carrinho" element={<Cart/>}/>
       </Routes>
     </Router>
   );

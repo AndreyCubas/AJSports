@@ -17,3 +17,6 @@ yarn-error.log*
 # IDEs e sistema
 .vscode/
 .DS_Store
+
+# Imagens
+camisas/
