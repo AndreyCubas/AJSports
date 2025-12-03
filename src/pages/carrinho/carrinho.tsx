@@ -17,7 +17,7 @@ const mockCart: CartItem[] = [
     team: "Flamengo",
     price: 269.99,
     quantity: 1,
-    image: "../../camisas/Camisas jogador/Flamengo l 25-26/202502201322031.jpg"
+    image: "../../public/camisas/Camisas jogador/Flamengo l 25-26/202502201322031.jpg"
   },
   {
     id: 2,

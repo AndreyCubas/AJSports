@@ -13,7 +13,7 @@ const initialState: FormState = {
   message: "",
 };
 
-const Contact: React.FC = () => {
+const Contato: React.FC = () => {
   const [form, setForm] = useState<FormState>(initialState);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
@@ -119,4 +119,4 @@ const Contact: React.FC = () => {
   );
 };
 
-export default Contact;
+export default Contato;
