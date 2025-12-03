@@ -1,5 +1,6 @@
 import React from "react";
 import { FaHome, FaFutbol, FaTags, FaShoppingCart, FaInfoCircle } from "react-icons/fa";
+import { IoCall } from "react-icons/io5";
 
 type SidebarProps = {
   isOpen: boolean;
@@ -34,6 +35,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => (
       </a>
       <a href="/carrinho" className="flex items-center gap-3 py-2 px-2 rounded hover:bg-blue-700">
         <FaShoppingCart /> Carrinho
+      </a>
+      <a href="/contato" className="flex items-center gap-3 py-2 px-2 rounded hover:bg-blue-700">
+        <IoCall /> Contato
       </a>
       <a href="/sobre" className="flex items-center gap-3 py-2 px-2 rounded hover:bg-blue-700">
         <FaInfoCircle /> Sobre
